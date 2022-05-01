@@ -17,6 +17,7 @@ class CvController extends Controller
     public function index()
     {
         $cvs= Cv::where('is_public', true)->get();
+        return view('cvs.index', ['cvs'=> $cvs]);
     }
 
     /**
@@ -28,6 +29,7 @@ class CvController extends Controller
     {
         //we need to check if the user have a custom template here and let him to choose it.
         //after choosing we shoould pass the template to a view to be filled by the user.
+        return view('cvs.create');
     }
 
     /**

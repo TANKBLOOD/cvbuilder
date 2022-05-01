@@ -24,7 +24,7 @@ class CvTemplateController extends Controller
      */
     public function create()
     {
-        //
+        return view('cvtemps.create');
     }
 
     /**

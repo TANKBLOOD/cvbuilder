@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CvController;
+use App\Http\Controllers\CvTemplateController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +22,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/cvs', [CvController::class, 'index'])->name('cvs');
+
+Route::get('/createTemplate', [CvTemplateController::class, 'create'])->name('cvTemp.create');
